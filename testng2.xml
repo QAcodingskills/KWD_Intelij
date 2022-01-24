@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="KWD suite">
+	<test name="KWD test">
+		<classes>
+			<class name="org.qaautomation.Home" />
+			<class name="org.qaautomation.sign_up" />
+			<class name="org.qaautomation.Login" />
+			<class name="org.qaautomation.Profile" />
+			<class name="org.qaautomation.post_add" />
+			
+		</classes>
+	</test>
+</suite>
