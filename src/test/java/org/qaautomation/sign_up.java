@@ -17,10 +17,6 @@ public class sign_up extends base_methods {
 
 	@BeforeClass
 	public void init_odj() throws Throwable {
-		
-		HP = new Home_path(driver);
-		driver.findElement(HP.login_link).click();
-		Thread.sleep(3000);
 		rp = new registration_path(driver);
 		driver.findElement(rp.signup_link).click();
 		ot = new OTP_path(driver);

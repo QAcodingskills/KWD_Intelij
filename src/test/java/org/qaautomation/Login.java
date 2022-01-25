@@ -23,12 +23,7 @@ public class Login extends base_methods {
 	@BeforeClass
 	public void init_odj() throws Throwable {
 		
-		//HP = new Home_path(driver);
 		Thread.sleep(1000);
-		//driver.findElement(HP.login_link).click();
-		
-		
-		
 		LP = new Login_path(driver);
 	}
 

@@ -10,16 +10,19 @@ import org.openqa.selenium.WebElement;
 import org.qaautomation.PageComponents.base_methods;
 
 public class Home_path extends base_methods {
-    WebDriver driver;
+    public WebDriver driver;
 
     // Elements path Variables for Home page.
     public By location_field = By.id("location_formated_address");
     public By location_save_btn = By.className("save_location_btn");
-
-    public By success_msg = By.xpath("//div[@id='toast-container']/div[contains(@style,'opacity: 1')]");
-    public By success_msg_close = By.xpath("//div[@id='toast-container']/div/button");
     public By login_link = By.xpath("//div[@class='user_right']/a");
+    public By validation_fields = By.xpath("//div[contains(text(),'.')]");
+    public By newsletter_subscribe_btn = By.xpath("//div[@class='newsletter_input']//button[@type='button']");
+    public By email_field = By.xpath("//div[@class='newsletter_input']//input[@type='text']");
+    public By success_error_message = By.xpath("//div[@id='toast-container']//div[@role='alertdialog']");
 
+    public String Blank_email_error[] = {"Email is required."};
+    public String invalid_email_error[] ={"Please enter valid email id here."};
     //Constructor for initialize Driver locally.
     public Home_path(WebDriver driver) {
         this.driver = driver;
@@ -66,5 +69,21 @@ public class Home_path extends base_methods {
             }
             window_handel(winHandleBefore1);
         }
+    }
+
+    public List<WebElement> validation_fields() {
+        return driver.findElements(validation_fields);
+    }
+
+    public WebElement newsletter_subscribe_btn() {
+        return driver.findElement(newsletter_subscribe_btn);
+    }
+
+    public WebElement email_field() {
+        return driver.findElement(email_field);
+    }
+
+    public WebElement success_error_message() {
+        return driver.findElement(success_error_message);
     }
 }
