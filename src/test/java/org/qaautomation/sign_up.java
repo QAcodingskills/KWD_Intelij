@@ -61,8 +61,8 @@ public class sign_up extends base_methods {
 		
 		insertdata(rp.first_name_field, "Quality", rp.RBD);
 		insertdata(rp.last_name_field, "Check", rp.RBD);
-		insertdata(rp.email_field, "indra260@mailinator.com", rp.RBD);
-		insertdata(rp.mobile_number_field, "95995886647", rp.RBD);
+		insertdata(rp.email_field, "amit28134@mailinator.com", rp.RBD);
+		insertdata(rp.mobile_number_field, "85995886647", rp.RBD);
 		insertdata(rp.password_field, "System@123", rp.RBD);
 		insertdata(rp.cnf_password_field, "System@123", rp.RBD);
 		Thread.sleep(20600);

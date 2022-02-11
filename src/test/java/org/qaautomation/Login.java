@@ -64,7 +64,7 @@ public class Login extends base_methods {
 	
 	@Test(priority = 4)
 	public void valid_field() throws Throwable {
-		init_email("indra26031@mailinator.com");
+		init_email("amit28134@mailinator.com");
 		//LP.email = "";
 		insertdata(LP.email_address, email, LP.driver);
 		insertdata(LP.pass_address, "System@123", LP.driver);

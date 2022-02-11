@@ -10,6 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+//import org.apache.logging.log4j.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -44,7 +45,8 @@ public class base_methods {
     public static String path;
     // Some Global Variable.
     public static String email;
-
+    public static By breadcrumbs = By.xpath("//div[@class='breadcrumb_panel']/div/ol/li");
+    //public static Logger log =
     // open browser method start
     public static void open_browser(String browsername, String url) {
         try {
@@ -308,6 +310,22 @@ public class base_methods {
     public static void moveing(WebElement element) {
         act = new Actions(driver);
         act.moveToElement(element).build().perform();
+    }
+
+    public static String breadcrumbs_string() {
+        List<WebElement> li = breadcrumbs();
+        String breadcrumbs_string = "";
+        for(int i=0; i<li.size();i++) {
+            breadcrumbs_string = breadcrumbs_string + li.get(i).getText() ;
+            if(i<(li.size()-1)) {
+                breadcrumbs_string = breadcrumbs_string +"/";
+            }
+        }
+        return breadcrumbs_string;
+    }
+
+    public static List<WebElement> breadcrumbs() {
+        return driver.findElements(breadcrumbs);
     }
 
 }

@@ -66,7 +66,7 @@ public class Home extends base_methods {
 
 	@Test(enabled = true, priority = 6)
 	public void valid_newslatter_email() throws Throwable {
-		insertdata(HP.email_field, "indra28134@gmail.com", HP.driver);
+		insertdata(HP.email_field, "amit28134@gmail.com", HP.driver);
 		HP.newsletter_subscribe_btn().click();
 		Thread.sleep(3000);
 		String error = HP.success_error_message().getText();
